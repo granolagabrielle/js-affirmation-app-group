@@ -43,7 +43,7 @@ function addAffirmation(event) {
     table.innerHTML += `<tr>
                           <td>${affirmation}</td>
                           <td>${author}</td>
-                          <td><button onclick="removeAffirmation(event)">X</button></td>
+                          <td><button onclick="removeAffirmation(event)">❌</button></td>
                         </tr>  `;
   } else {
     alert('no more affirmations');

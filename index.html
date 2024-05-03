@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <title>JavaScript Affirmation App</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>JavaScript Affirmation App</title>
+  </head>
 
-<body>
-  <header>
-    <h1>JavaScript Affirmation App</h1>
-  </header>
+  <body>
+    <header>
+      <h1>JavaScript Affirmation App</h1>
+    </header>
 
-  <main>
-    <section>
-      <h3>Fire and Ice:</h3>
-      <p>Fire Count: <span id="fire-count">0</span></p>
-      <p>Ice Count: <span id="ice-count">0</span></p>
-      <button id="fire" onclick="addFire(event)">🔥</button>
-      <button id="ice" onclick="addIce(event)">❄️</button>
-      <div id="emoji">
-        <!-- fire and ice emojis go here -->
+    <main>
+      <section>
+        <h3>Fire and Ice:</h3>
+        <p>Fire Count: <span id="fire-count">0</span></p>
+        <p>Ice Count: <span id="ice-count">0</span></p>
+        <button id="fire" onclick="addFire(event)">🔥</button>
+        <button id="ice" onclick="addIce(event)">❄️</button>
+        <div id="emoji">
+          <!-- fire and ice emojis go here -->
+        </div>
+      </section>
+
+      <section>
+        <h3>Create an Affirmation:</h3>
+        <form id="form">
+          <input placeholder="Affirmation" type="text" id="affirmation" required />
+          <input placeholder="Author" type="text" id="author" required />
+          <button id="submit-button" onSubmit="addAffirmation(event)" type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section>
+        <h3>Your Affirmations:</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Affirmation Text</th>
+              <th>Affirmation Author</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <div class="snow">
+        <h5 id="footer-thanks">Thanks for being here. Sincerely. 🙂</h5>
       </div>
-    </section>
-
-    <section>
-      <h3>Create an Affirmation:</h3>
-      <form id="form">
-        <input
-          placeholder="Affirmation"
-          type="text"
-          id="affirmation">
-        <input
-          placeholder="Author"
-          type="text"
-          id="author"
-          >
-        <button id="submit-button" onclick="addAffirmation(event)" type="submit">Submit</button>
-      </form>
-    </section>
-    
-    <section>
-      <h3>Your Affirmations:</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Affirmation Text</th>
-            <th>Affirmation Author</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody id="table-body">
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <footer>
-    <h5>Thanks for being here. Sincerely. 🙂</h5>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
