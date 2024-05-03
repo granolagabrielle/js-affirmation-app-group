@@ -19,23 +19,28 @@
   <main>
     <section>
       <h3>Fire and Ice:</h3>
-      <button>🔥</button>
-      <button>❄️</button>
-      <div>
+      <p>Fire Count: <span id="fire-count">0</span></p>
+      <p>Ice Count: <span id="ice-count">0</span></p>
+      <button id="fire" onclick="addFire(event)">🔥</button>
+      <button id="ice" onclick="addIce(event)">❄️</button>
+      <div id="emoji">
         <!-- fire and ice emojis go here -->
       </div>
     </section>
 
     <section>
       <h3>Create an Affirmation:</h3>
-      <form>
+      <form id="form">
         <input
           placeholder="Affirmation"
-          type="text">
+          type="text"
+          id="affirmation">
         <input
           placeholder="Author"
-          type="text">
-        <button>Submit</button>
+          type="text"
+          id="author"
+          >
+        <button id="submit-button" onclick="addAffirmation(event)" type="submit">Submit</button>
       </form>
     </section>
     
@@ -46,21 +51,10 @@
           <tr>
             <th>Affirmation Text</th>
             <th>Affirmation Author</th>
+            <th>Delete</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>You probably got this!</td>
-            <td>Oscar</td>
-          </tr>
-          <tr>
-            <td>You definitely got this!</td>
-            <td>Elmo</td>
-          </tr>
-          <tr>
-            <td>Don't forget to delete these three hardcoded table rows!</td>
-            <td>Abby Cadabby</td>
-          </tr>
+        <tbody id="table-body">
         </tbody>
       </table>
     </section>
